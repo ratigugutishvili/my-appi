@@ -15,8 +15,8 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Global State App</h1>
-      <button onClick={handleButtonClick}>Get Random Element</button>
+      <h1>გეროს კლასტერის სეკრეტ სანტა</h1>
+      <button onClick={handleButtonClick}>აბა ვნახოთ ვინ ამოგივა</button>
       {randomElement && <p>Random Element: {randomElement}</p>}
     </div>
   );
