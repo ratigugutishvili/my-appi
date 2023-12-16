@@ -3,6 +3,7 @@ import axios from 'axios';
 
 function App() {
   const [randomElement, setRandomElement] = useState(null);
+  const [claass,setclass] = useState('')
 
   const handleButtonClick = async () => {
     try {
@@ -11,13 +12,14 @@ function App() {
     } catch (error) {
       console.error('Error fetching random element:', error.message);
     }
+    setclass('display-none')
   };
 
   return (
     <div className="App">
       <h1>გეროს კლასტერის სეკრეტ სანტა</h1>
-      <button onClick={handleButtonClick}>აბა ვნახოთ ვინ ამოგივა</button>
-      {randomElement && <p>Random Element: {randomElement}</p>}
+      <button onClick={handleButtonClick} className={claass} >აბა ვნახოთ ვინ ამოგივა</button>
+      {randomElement && <p>დაა ამოგივიდაა: {randomElement}</p>}
     </div>
   );
 }
